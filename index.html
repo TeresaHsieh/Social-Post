@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Practice</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+</head>
+
+<body class="flexContainer">
+    <div class="flex">
+        <div id="login-user"></div>
+        <div>
+            <span style="font-size: 15px">Search Friend : </span><input id="find-user" type="text" value="" placeholder="Please Fill in Friend's Email">
+            <div id="user-list"></div>
+        </div>
+        <!-- <div class="seperateLine"></div> -->
+        <form id="articlePostForm">
+            <span style="font-size: 15px">Post Article：</span><br />
+            <span style="color:lightslategrey">Article_Title : </span><input type="text" name="article_title" id="article_title"
+                placeholder="Write Down Your Idea"></input>
+            </br>
+            <span style="color:lightslategrey">Article_Content : </span><input type="text" name="article_content" id="article_content"
+                placeholder="Write Down Your Content"></input>
+            </br>
+            <span style="color:lightslategrey">Article_Tag : </span>
+            <input id="cb_Beauty" type="checkbox" value="Beauty" name="article_tag" />
+            <label for="cb_Beauty">Beauty</label>
+            <input id="cb_Gossiping" type="checkbox" value="Gossiping" name="article_tag" />
+            <label for="cb_Gossiping">Gossiping</label>
+            <input id="cb_Joke" type="checkbox" value="Joke" name="article_tag" />
+            <label for="cb_Joke">Joke</label>
+            <input id="cb_SchoolLife" type="checkbox" value="SchoolLife" name="article_tag" />
+            <label for="cb_SchoolLife">SchoolLife</label><br /><br />
+            <button type="submit" value="Submit" id="submit">Post The Articles !</button>
+        </form>
+        <!-- <div class="seperateLine"></div> -->
+        <button id="get-all-articles">Show All the Articles</button>
+        <button id="get-self-articles">Show My Articles</button>
+        <div>
+            <span style="font-size: 15px">Show Articles by Specific Tag：</span>
+            <select id="select-tag" onchange="app.getTagFriendArticle()">
+                　　　　 <option value="">Please Select</option>
+                　　　　 <option value="Beauty">Beauty</option>
+                　　　　 <option value="Gossiping">Gossiping</option>
+                <option value="Joke">Joke</option>
+                <option value="SchoolLife">SchoolLife</option>
+                　　
+            </select>
+        </div>
+        </br>
+        <div>
+            <span style="font-size: 15px">Show Articles by Friend and Specific Tag：</span>
+            <select id="select-friend" onchange="app.getTagFriendArticle()">
+                　　　　 <option value="">Please Select</option>
+                　　</select>
+        </div>
+        <div id="article-list"></div>
+    </div>
+</body>
+
+</html>
+<script defer src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+<script defer src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+<script defer src="script.js"></script>
+<script defer src="lib.js"></script>
+<script>
+
+</script>
