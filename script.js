@@ -1,23 +1,21 @@
-const credentials = require("./credentials");
-
 let app = {
   init: null,
   firebase: {
     config: {
-      apiKey: credentials.apiKey,
-      authDomain: credentials.authDomain,
-      databaseURL: credentials.databaseURL,
-      projectId: credentials.projectId,
-      storageBucket: credentials.storageBucket,
-      messagingSenderId: credentials.messagingSenderId,
-      appId: credentials.appId
+      apiKey: "AIzaSyBLzACVBuVwyu5mf7YrnU8jnCnrbhNkHOo",
+      authDomain: "fir-practice-a550d.firebaseapp.com",
+      databaseURL: "https://fir-practice-a550d.firebaseio.com",
+      projectId: "fir-practice-a550d",
+      storageBucket: "fir-practice-a550d.appspot.com",
+      messagingSenderId: "276933855471",
+      appId: "1:276933855471:web:11ab47729cbe8b28"
     },
     db: null
   },
   loginUser: {
     id: "",
     name: "",
-    email: "Rita@gmail.com",
+    email: "Teresa@gmail.com",
     friendList: [],
     Invitation: [], // 使用者送出的邀請
     awaitInvitation: [] //使用者尚未答覆的邀請
